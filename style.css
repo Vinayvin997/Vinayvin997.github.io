@@ -1,167 +1,110 @@
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  background: #f2f4f8;
+  background: linear-gradient(to bottom, #f9fafb, #ffffff);
   color: #333;
-  line-height: 1.6;
 }
 
-header {
-  background-color: #2c3e50;
+.header {
+  background: linear-gradient(to right, #4f46e5, #9333ea);
   color: white;
   text-align: center;
-  padding: 3rem 1rem;
+  padding: 40px 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-header h1 {
-  margin: 0;
-  font-size: 2.8rem;
+.header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
 }
 
-header p {
-  font-size: 1.2rem;
-}
-
-.btn {
-  margin-top: 1rem;
+.resume-btn {
   display: inline-block;
-  background-color: #e67e22;
-  color: white;
-  padding: 0.7rem 1.4rem;
-  border-radius: 30px;
-  text-decoration: none;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: white;
+  color: #4f46e5;
   font-weight: bold;
-  transition: background 0.3s ease;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
 }
 
-.btn:hover {
-  background-color: #cf711f;
+.resume-btn:hover {
+  background: #f3f4f6;
 }
 
-main {
+.container {
   max-width: 900px;
-  margin: auto;
-  padding: 2rem 1rem;
+  margin: 0 auto;
+  padding: 40px 20px;
 }
 
 section {
-  margin-bottom: 3rem;
-  background: white;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  margin-bottom: 60px;
 }
 
 h2 {
-  color: #2c3e50;
-  border-left: 4px solid #e67e22;
-  padding-left: 0.8rem;
-  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #4f46e5;
+  margin-bottom: 20px;
 }
 
-section#skills {
-  padding: 40px 20px;
-  text-align: center;
-}
-
-h2 {
-  font-size: 32px;
-  margin-bottom: 30px;
-  color: #333;
-}
-
-/* Skills Container */
-.skills-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  animation: fadeInUp 1s ease-out;
-}
-
-/* Each Skill Item */
-.skill-item {
-  background-color: #0077cc;
-  color: white;
-  padding: 15px 25px;
-  margin: 10px 0;
-  border-radius: 10px;
-  width: 90%;
-  max-width: 500px;
-  text-align: left;
-  font-size: 18px;
-  display: flex;
-  align-items: center;
+.skills, .courses {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  padding-left: 0;
+  list-style: none;
 }
 
-.skill-item:hover {
+.skills li, .courses li {
+  background: white;
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+
+.skills li:hover, .courses li:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-.skill-icon {
-  font-size: 22px;
-}
-
-/* Animation */
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-      .resume-button {
-  display: inline-block;
-  background-color: #28a745;
-  color: white;
-  padding: 12px 25px;
+.timeline-item {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-left: 5px solid #10b981;
   border-radius: 8px;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: bold;
-  transition: background-color 0.3s ease, transform 0.2s;
-}
-.certifications li {
-  margin: 0.5rem 0;
-  font-size: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
-.timeline .job {
-  background: #fdfdfd;
-  margin-bottom: 1.5rem;
-  padding: 1rem 1.2rem;
-  border-left: 4px solid #3498db;
-  border-radius: 6px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.03);
+.timeline-item h3 {
+  margin-top: 0;
+  color: #1f2937;
 }
 
-.job h3 {
-  margin: 0;
-  font-size: 1.1rem;
-  color: #2c3e50;
-}
-
-.job small {
-  color: #7f8c8d;
+.timeline-item span {
+  font-size: 0.9rem;
+  color: #6b7280;
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 10px;
 }
 
-.job ul {
-  margin: 0;
-  padding-left: 1.2rem;
+.timeline-item ul {
+  padding-left: 20px;
+  list-style: disc;
+  color: #374151;
 }
 
-footer {
+.footer {
   text-align: center;
-  padding: 1rem;
-  background-color: #2c3e50;
-  color: white;
-  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #9ca3af;
+  padding: 20px;
+  border-top: 1px solid #e5e7eb;
+  margin-top: 40px;
 }
+
 
