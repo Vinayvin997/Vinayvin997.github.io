@@ -50,6 +50,23 @@ h2 {
   color: #4f46e5;
   margin-bottom: 20px;
 }
+.linkedin-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.linkedin-link:hover {
+  background: white;
+  color: #4f46e5;
+}
+
 
 .skills, .courses {
   display: grid;
